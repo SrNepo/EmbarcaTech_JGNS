@@ -699,15 +699,3 @@ int getIndex(int x, int y) {
     }
 }
 ```
-
-## Exercício:
-
-Crie uma função “leds” com os seguintes argumentos:
-
-> leds(x, y, r, g, b)
-
-Sendo que x e y definem a posição do LED na matriz e r, g e b definem a intensidade de cor variando de 0 a 100%. Portanto, 0 ≤ x ≤ 4, 0 ≤ y ≤ 4, 0 ≤ r ≤ 100, 0 ≤ g ≤ 100 e 0 ≤ b ≤ 100.
-
-Use esta função e faça um programa para acender um coração vermelho na matriz da BitDogLab, como mostra a figura:
-
-![Figura](images/led_exercicio.png)
