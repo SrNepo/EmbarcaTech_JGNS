@@ -49,7 +49,12 @@ pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(neopixel_pio neopixel_pio.c )
+add_executable(neopixel_pio neopixel_pio.c 
+    functions/funcoes_buzzers.c 
+    functions/funcoes_display.c 
+    functions/funcoes_matriz.c
+    inc/ssd1306_i2c.c
+)
 
 pico_set_program_name(neopixel_pio "neopixel_pio")
 pico_set_program_version(neopixel_pio "0.1")
@@ -67,13 +72,16 @@ target_link_libraries(neopixel_pio
 
 # Add the standard include files to the build
 target_include_directories(neopixel_pio PRIVATE
+  buzzer
   ${CMAKE_CURRENT_LIST_DIR}
 )
 
 # Add any user requested libraries
 target_link_libraries(neopixel_pio 
         hardware_pio
+        hardware_pwm
         hardware_clocks
+        hardware_i2c
         )
 
 pico_add_extra_outputs(neopixel_pio)
