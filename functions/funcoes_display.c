@@ -57,7 +57,6 @@ restart:
 }
 
 void desligar_display_oled() {
-    printf("Desligando display...\n");
     ssd1306_send_command(0xAE); 
 }
 
